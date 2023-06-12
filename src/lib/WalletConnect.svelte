@@ -2,7 +2,7 @@
 	import { ethers } from 'ethers';
 
 	async function connectWallet() {
-		let provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
+		let provider = new ethers.BrowserProvider(window.ethereum, 'any');
 		await provider.send('eth_requestAccounts', []);
 		const signer = provider.getSinger();
 		const account = await signer.getAddress();
