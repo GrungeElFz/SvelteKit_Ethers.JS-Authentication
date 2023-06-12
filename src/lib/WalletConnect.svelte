@@ -2,6 +2,10 @@
 	import { ethers } from 'ethers';
 
 	async function connectWallet() {
+		/**
+		 * @description `Web3Provider` is now called `BrowserProvider` (v5 --> v6)
+		 * @link https://docs.ethers.org/v6/migrating/
+		 */
 		let provider = new ethers.BrowserProvider(window.ethereum, 'any');
 		await provider.send('eth_requestAccounts', []);
 		const signer = provider.getSigner();
