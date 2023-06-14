@@ -23,4 +23,12 @@
 		address = ethers.verifyMessage(`Signing one-time nonce: ${nonce}`, signature);
 		valid = address === expectedAddress;
 	}
+	async function reset() {
+		nonce = Math.floor(Math.random() * 1000000);
+		signature = '';
+		valid = null;
+		address = '';
+		web3Props.account = await web3Props.signer.getAddress();
+		signed = false;
+	}
 </script>
