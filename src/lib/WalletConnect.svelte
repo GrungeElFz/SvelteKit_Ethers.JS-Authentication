@@ -13,6 +13,8 @@
 		const account = await signer.getAddress();
 		const network = await provider.getNetwork();
 		const chainID = network.chainId;
+
+		web3Props = { provider, signer, account, chainID };
 	}
 </script>
 
