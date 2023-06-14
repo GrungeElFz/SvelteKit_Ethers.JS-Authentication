@@ -10,7 +10,8 @@
 		await provider.send('eth_requestAccounts', []);
 		const signer = await provider.getSigner();
 		const account = await signer.getAddress();
-		const chainID = await signer.getChainId();
+		const network = await provider.getNetwork();
+		const chainID = network.chainId;
 	}
 </script>
 
