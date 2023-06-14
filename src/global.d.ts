@@ -8,6 +8,6 @@ declare global {
 		provider: ethers.BrowserProvider.JsonRpcProvider;
 		signer: ethers.BrowserProvider.JsonRpcSigner;
 		account: string;
-		chainId: number;
+		chainId: bigint;
 	}
 }
