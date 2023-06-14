@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ethers } from 'ethers';
+	export let web3Props: Web3Props;
 
 	async function connectWallet() {
 		/**
