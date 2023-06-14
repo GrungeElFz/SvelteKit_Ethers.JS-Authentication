@@ -15,4 +15,4 @@
 	}
 </script>
 
-<button class="btn">Attach Wallet</button>
+<button class="btn" on:click={connectWallet}>Attach Wallet</button>
