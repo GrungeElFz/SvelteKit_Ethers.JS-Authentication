@@ -19,4 +19,8 @@
 		signature = await web3Props.signer.signMessage(`Signing one-time nonce: ${nonce}`);
 		signed = true;
 	}
+	function verify() {
+		address = ethers.verifyMessage(`Signing one-time nonce: ${nonce}`, signature);
+		valid = address === expectedAddress;
+	}
 </script>
