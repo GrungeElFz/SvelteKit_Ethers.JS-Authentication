@@ -18,4 +18,6 @@
 	}
 </script>
 
-<button class="btn" on:click={connectWallet}>Attach Wallet</button>
+{#if !web3Props?.account}
+	<button class="btn" on:click={connectWallet}>Attach Wallet</button>
+{/if}
