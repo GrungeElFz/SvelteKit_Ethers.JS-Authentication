@@ -13,4 +13,10 @@
 	let expectedAddress: string;
 
 	const notYourAddr = '0x0000000000000000000000000000000000000000';
+
+	async function sign() {
+		nonce = Math.floor(Math.random() * 1000000);
+		signature = await web3Props.signer.signMessage(`Signing one-time nonce: ${nonce}`);
+		signed = true;
+	}
 </script>
