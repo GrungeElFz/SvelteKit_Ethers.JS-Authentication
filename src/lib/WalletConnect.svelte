@@ -8,7 +8,7 @@
 		 */
 		let provider = new ethers.BrowserProvider(window.ethereum, 'any');
 		await provider.send('eth_requestAccounts', []);
-		const signer = provider.getSigner();
+		const signer = await provider.getSigner();
 		const account = await signer.getAddress();
 		const chainID = await signer.getChainId();
 	}
